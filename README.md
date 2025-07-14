@@ -33,7 +33,7 @@ This repository documents my progressive learning of JavaScript technologies, st
 ## Current Progress
 
 ### ✔️ Completed: Pure JavaScript
-- [Product Management System](1-pure-js/product-management-system) - CRUD application with localStorage persistence
+- [Product Management System](pure-js/product management system) - CRUD application with localStorage persistence
 
 ## How to Use This Repository
 
