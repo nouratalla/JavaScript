@@ -18,6 +18,7 @@ This repository documents my progressive learning of JavaScript technologies, st
    - Destructuring
    - Spread/Rest operators
    - Promises
+   - Generators
 
 3. **AJAX & JSON**
    - Fetch API
@@ -26,9 +27,7 @@ This repository documents my progressive learning of JavaScript technologies, st
    - Working with REST APIs
 
 4. **Owl Carousel**
-   - Implementing sliders
-   - Custom configurations
-   - Responsive design integration
+ 
 
 ## Current Progress
 
