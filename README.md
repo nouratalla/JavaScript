@@ -4,7 +4,7 @@ This repository documents my progressive learning of JavaScript technologies, st
 
 ## Learning Path
 
-1. **Pure JavaScript Fundamentals**
+1. **Pure JavaScript Fundamentals  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript Badge" />**
    - DOM manipulation
    - Event handling
    - LocalStorage API
@@ -26,7 +26,7 @@ This repository documents my progressive learning of JavaScript technologies, st
    - JSON manipulation
    - Working with REST APIs
 
-4. **Owl Carousel**
+4. **OWL**
  
 
 ## Current Progress
