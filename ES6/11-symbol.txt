@@ -1,0 +1,13 @@
+- symbol is unique and immutable
+    const mySymbol = Symbol();
+    const myObject  = {
+        username: "nour",
+        age: 10,
+        [mySymbol]: "hidden from iteration"
+    };
+
+    for (let val of Object.entries(myObject) ){
+        console.log(val);
+    }
+
+- const mysymbol = Symbol.for() // create symbol if it is not exist if it exist return it

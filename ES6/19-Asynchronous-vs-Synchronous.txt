@@ -1,0 +1,28 @@
+- JavaScript Execution Model
+    - JavaScript is a single-threaded language
+    - It has one call stack and executes one line of code at a time
+
+- Synchronous Programming
+    - Code runs line by line
+    - Each operation waits for the previous one to finish
+    - This can block other tasks if something takes time
+
+console.log("one");
+window.alert("bad"); // blocks everything
+console.log("two"); // Output: one [blocks here until user closes alert] two
+
+- Asynchronous Programming
+    - Allows certain tasks (like setTimeout, API calls) to run in the background
+    - JS hands off long tasks to the browser (Web APIs)
+    - Execution doesn't wait for those tasks to finish
+
+console.log("function to do something");
+window.setTimeout(() => console.log("get friends list"), 1000);
+window.setTimeout(() => console.log("get latest news"), 2000);
+console.log("do important things, waiting is a big problem");
+// Output: function to do something do important things, waiting is a big problem, [get friends list] (after 1s),[get latest news] (after 2s)
+
+- Real-Life Example: Restaurant
+    - Synchronous: One waiter takes an order, cooks the food, serves it, then helps the next customer
+    - Asynchronous: One waiter takes multiple orders and lets the kitchen handle cooking while helping others
+

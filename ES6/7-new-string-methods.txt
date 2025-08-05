@@ -1,0 +1,4 @@
+- startsWith => string.startsWith(search string, position = 0)
+- endsWith => string.endsWith(search string, end position = string.length)
+- includes => string.includes(search string, position = 0)
+- repeat => string.repeat(count)

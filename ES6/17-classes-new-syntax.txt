@@ -1,0 +1,37 @@
+// class old way syntax
+function User(name, age) {
+    this.name = name;
+    this.age = age;
+}
+
+
+User.prototype.getInfo = function () {
+    console.log(`Hello ${this.name}  your age is ${this.age}`);
+}
+
+User.prototype.getDays = function () {
+    console.log(`your age  in days is ${this.age * 365} `);
+}
+
+const firstUser = new User("nour",24);
+firstUser.getInfo();
+firstUser.getDays();
+
+
+
+// new syntax
+class User2 {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+    getInfo() {
+        console.log(`Hello ${this.name}  your age is ${this.age}`);
+    }
+    getDays() {
+        console.log(`your age  in days is ${this.age * 365} `);
+    }
+}
+const secondUser = new User2("nour",24);
+secondUser.getInfo();
+secondUser.getDays();

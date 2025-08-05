@@ -1,0 +1,65 @@
+- Promise:
+    - A Promise is a JavaScript object that represents the future result (success or failure) of an asynchronous operation
+    - Promises help replace traditional callback functions to avoid callback hell (a deeply nested structure, also known as the pyramid of doom)
+
+- Promise States:
+    - Pending:	    Initial state, neither success nor failure
+    - Fulfilled:	Operation completed successfully
+    - Rejected: 	Operation failed
+
+- Creating a Basic Promise:
+    const myPromise = new Promise((resolve, reject) => {
+    let connect = true;
+
+    if (connect) {
+        resolve("Connection established");
+    } else {
+        reject(Error("Connection failed"));
+    }
+    })
+    .then((resolved) => console.log(resolved))
+    .catch((rejected) => console.log(rejected));
+
+- Callbacks vs Promises:
+    - Using traditional callbacks:
+        function getRepo(apiUrl) {
+        let myRequest = new XMLHttpRequest();
+
+        myRequest.onreadystatechange = function () {
+            if (this.readyState === 4 && this.status === 200) {
+            console.log(JSON.parse(this.responseText));
+            }
+        };
+
+        myRequest.open("GET", apiUrl, true);
+        myRequest.send();
+        }
+
+        getRepo("https://api.github.com/users/nouratalla");
+
+
+    - Same Logic with Promises:
+        const getRepoPromise = (apiURL) => {
+    return new Promise((resolve, reject) => {
+        let myRequest = new XMLHttpRequest();
+
+        myRequest.onload = function () {
+        if (this.readyState === 4 && this.status === 200) {
+            resolve(JSON.parse(this.responseText));
+        } else {
+            reject(Error(this.statusText));
+        }
+        };
+
+        myRequest.open("GET", apiURL, true);
+        myRequest.send();
+    });
+    };
+
+    getRepoPromise("https://api.github.com/users/nouratalla").then(
+    (result) => console.log(result),
+    (error) => console.log(error)
+    );
+
+
+

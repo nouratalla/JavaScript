@@ -1,0 +1,17 @@
+- spread Operator (...) expands an iterable
+
+let arr1 = [1,2,3];
+let arr2 = [4,5,6];
+
+console.log(arr1.concat(arr2));
+
+let bothArrays = [...arr1, ...arr2];
+console.log(bothArrays);
+
+
+function sum (x,y,z) {
+    return x + y + z;
+}
+
+console.log(sum.apply(null,arr2));
+console.log(sum(...arr2));

@@ -1,0 +1,31 @@
+- set is an object that save a unique data without a key
+    let myBooks = new Set([1,2,3,3]);
+    let myArray = [1,2,3,3];
+
+    console.log(myBooks);
+    console.log(myArray);
+
+    console.log(myBooks); // cannot access with index
+    console.log(myArray[1]);
+
+- set Methods:
+    let books = new Set('c++');
+    books.add('c++');
+    console.log(books);
+    // {"c","+","c++"}
+    books.delete('');
+    books.clear();
+
+- set VS WeakSet:
+    set:
+        - contain any types of values
+        - get elements size on it
+        - forEach available
+        - if you set an object in it to null it still exist (garbage collection does not remove it )
+   
+    WeakSet:
+        - contain object only    ( return invalid value if you try to add string or int)
+        - you cannot use size    (return undefined)
+        - forEach not available  (return forEach is not a function)
+        - if you set an object in it to null it is deleted (garbage collection remove it )
+

@@ -1,0 +1,30 @@
+// basic way 
+function showMyInfo(username, role, theme) {
+    username = username === undefined? 'defaultuser' : username;
+    role = role === undefined? 'defaultrole' : role;
+    theme = theme === undefined? 'defaulttheme' : theme;
+    return `Hello ${username} your role is ${role} and theme is ${theme}`;
+}
+
+console.log(showMyInfo());
+console.log(showMyInfo('nour'));
+console.log(showMyInfo('nour','admin'));
+console.log(showMyInfo('nour','admin','blue'));
+
+
+// truthy falsy way 
+function showMyInfo(username, role, theme) {
+    username = username || 'defaultuser';
+    role = role || 'defaultrole';
+    theme = theme ||'defaulttheme';
+    return `Hello ${username} your role is ${role} and theme is ${theme}`;
+}
+
+
+// new  way using default parameter
+function showMyInfo(username='defaultuser', role='defaultrole', theme='defaulttheme') {
+    return `Hello ${username} your role is ${role} and theme is ${theme}`;
+}
+
+
+

@@ -1,0 +1,73 @@
+// generator functions
+
+function * generateTickets() {
+    yield 1;
+    yield 2;
+    yield 3;
+    yield 4;
+    yield 5;
+
+}
+
+let iterator = generateTickets();
+console.log(typeof(iterator));
+console.log(iterator.next());
+console.log(iterator.next().value);
+console.log("do some thing before yield the next ticket");
+console.log(iterator.next().value);
+
+let myNumbers = [10,20,30,40,50];
+
+function * generateNumbers (nums) {
+    for (let i = 0 ; i < nums.length ; i ++) {
+        yield nums[i];
+    }
+}
+
+let generator = generateNumbers(myNumbers);
+console.log(generator.next().value);
+console.log(generator.next().value);
+console.log(generator.next().value);
+console.log(generator.next().value);
+console.log(generator.next().value);
+console.log(generator.next().value);
+
+
+function * generateNums() {
+    yield * [1,2,3,4,5,6];
+    yield 7;
+}
+
+let theGenerator = generateNums();
+console.log(theGenerator.next().value);
+console.log(theGenerator.next().value);
+console.log(theGenerator.next().value);
+console.log(theGenerator.next().value);
+console.log(theGenerator.next().value);
+console.log(theGenerator.next().value);
+
+// delegate generator
+function * generateNumbers () {
+    yield 1;
+    yield 2;
+    yield 3;
+}
+
+function * generateNames () {
+    yield "nour";
+    yield "ahmed";
+    yield "yasser";
+}
+
+function * generateAll () {
+    yield * generateNumbers();
+    yield * generateNames();
+}
+
+let genAll = generateAll();
+console.log(genAll.next());
+console.log(genAll.next());
+console.log(genAll.next());
+console.log(genAll.next());
+console.log(genAll.next());
+console.log(genAll.next());

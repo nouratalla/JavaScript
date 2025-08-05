@@ -1,0 +1,23 @@
+- fetch:
+    - fetch() is a modern way to make HTTP requests in JavaScript.
+    - It returns a Promise that resolves to a Response object.
+    - You typically need to call .json() or .text() to extract usable data.
+
+fetch("https://api.github.com/users/nouratalla")
+  .then((response) => {
+    // Parse the response into JSON
+    return response.json();
+  })
+  .then((data) => {
+    // Access and log the name from the API data
+    console.log(`The name is ${data.name}`);
+    return data.name;
+  })
+  .then((name) => {
+    // Work with the returned name
+    console.log(`First letter of name: ${name[0]}`);
+  })
+  .catch((error) => {
+    // Catch any errors in the chain
+    console.error("Fetch error:", error);
+  });

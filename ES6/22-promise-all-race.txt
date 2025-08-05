@@ -1,0 +1,51 @@
+- Promise.all()
+    - Waits for all promises to be fulfilled
+    - If any promise is rejected, the whole thing fails
+
+const myFirstPromise = new Promise((resolve, reject) => {
+  let connect = true;
+  if (connect) {
+    resolve("First Connection established");
+  } else {
+    reject(Error("First Connection failed"));
+  }
+});
+
+const mySecondPromise = new Promise((resolve, reject) => {
+  let connect = true;
+  if (connect) {
+    resolve("Second Connection established");
+  } else {
+    reject(Error("Second Connection failed"));
+  }
+});
+
+Promise.all([myFirstPromise, mySecondPromise])
+  .then((results) => {
+    console.log(results); // ['First Connection established', 'Second Connection established']
+  })
+  .catch((error) => {
+    console.error("At least one promise failed:", error);
+  });
+
+- Promise.race():
+    Resolves or rejects as soon as the first promise settles (either fulfilled or rejected)
+
+const thirdPromise = new Promise((resolve) => {
+  setTimeout(() => {
+    resolve("thirdPromise Resolved");
+  }, 500);
+});
+
+const fourthPromise = new Promise((resolve) => {
+  setTimeout(() => {
+    resolve("fourthPromise Resolved");
+  }, 100);
+});
+
+Promise.race([thirdPromise, fourthPromise])
+  .then((result) => {
+    console.log(result); // "fourthPromise Resolved"
+  });
+
+

@@ -1,0 +1,106 @@
+- Destructuring:
+    - object
+    - array
+    - parameter
+
+- object :
+    - Before ES6:
+            var user = {
+            name: 'nour',
+            age: 24,
+            gender: 'male',
+            city: 'menofia'
+        };
+
+        var u  = user.name,
+            a  = user.age,
+            g  = user.gender,
+            c  = user.city;
+
+        console.log(`My name is ${u}, my age is ${a}`);
+
+
+    - New way
+        const user = {
+            name: 'nour',
+            age: 24,
+            gender: 'male',
+            city: 'menofia'
+        };
+
+        const {name, gender, age, theme = 'default'} = user;
+        //object key and the variable name
+        const {name: theName, gender:theGender, age:theAge, theme: theTheme = 'default'} = user;
+        console.log(`My name is ${name}, my age is ${age} and theme is ${theme}`);
+
+- array:
+    //same as the object
+    const food = ['burger', 'pizza', 'chicken'];
+    const [one, two, three] = food;
+    console.log(`I love ${one}, ${two}, ${three} `);
+
+    // swap old way
+    var book = 'book',
+    video = 'video';
+
+    var temp = book;
+    book = video;
+    video = temp;
+
+    // new way 
+    [book, video] = [video, book];
+
+- mixed content array and object:
+        const user =  {
+        name: 'nour',
+        skilss: {
+            html:'70',
+            css:'40',
+            js: ['vue','react'],
+        }
+    };
+
+
+    const {userName, skilss: {html, css, js:[one, two]} } = user 
+
+- parameter:
+        // old way 
+        const user =  {
+        name:'nour',
+        skills: {
+            html:'70',
+            css:'80',
+            js:['vue','react']
+        }
+    };
+
+    function showMyInfo(user) {
+        console.log(`my name is ${user.name}`);
+        console.log(`my html skill progress is ${user.skills.html} and css is ${user.skills.css}`);
+        console.log(`my js frameworks ${user.skills.js[0]},${user.skills.js[1]}`);
+
+    }
+
+    showMyInfo(user);
+
+// new way 
+        const user =  {
+        name:'nour',
+        skills: {
+            html:'70',
+            css:'80',
+            js:['vue','react']
+        }
+    };
+
+    function showMyInfo({ name, skills: { html, css, js :[one, two] } } ) {
+        console.log(`my name is ${name}`);
+        console.log(`my html skill progress is ${html} and css is ${css}`);
+        console.log(`my js frameworks ${one},${two}`);
+
+    }
+
+    showMyInfo(user);
+
+
+

@@ -1,0 +1,50 @@
+-JavaScript modules allow us to split code into reusable files called modules.
+-Each file can export and import values like variables, functions, or classes.
+- Named export:
+    // app.js
+    export const a = 1;
+    export let array = [1, 2, 3, 4, 5, 6];
+
+    export function sayHello(name) {
+    return `Hello ${name}`;
+    }
+
+    We can also group them together:
+    export { a, array, sayHello };
+
+    // main.js
+    import { a, array, sayHello } from './app.js';
+
+    console.log(a);              // 1
+    console.log(array);          // [1, 2, 3, 4, 5, 6]
+    console.log(sayHello("Nour")); // Hello Nour
+
+- Default Export:
+    // app.js
+    export default function sayHello2(name) {
+    return `Hello ${name}`;
+    }
+
+    // main.js 
+    //Import it without curly braces:
+    import sayHello2 from './app.js';       
+    console.log(sayHello2("Sara")); // Hello Sara
+
+-  Mixing Named and Default Exports:
+        // app.js
+    export const a = 1;
+    export function sayHello(name) {
+    return `Hello ${name}`;
+    }
+    export default function sayHello2(name) {
+    return `Hello ${name}`;
+    }
+
+    // main.js
+    import sayHello2, { a, sayHello } from './app.js';
+
+
+
+
+
+

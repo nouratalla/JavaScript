@@ -1,0 +1,49 @@
+- Call Stack
+    - Tracks function calls in the order they happen
+    - When a function is called, it's pushed onto the call stack
+    - When a function finishes, it's popped off the stack
+    - The JavaScript interpreter always works with the top item in the stack
+    - If it encounters Web API functions (like setTimeout), it hands them off to the browser and continues
+
+- Web APIs (Browser APIs)
+    - Provided by the environment (like the browser)
+    - Examples: setTimeout
+    - When a Web API finishes its task, it sends its callback to the callback queue
+
+- Callback Queue
+    - Holds callbacks returned from Web APIs
+    - These callbacks wait until the call stack is empty
+
+- Event Loop
+    - Constantly monitors the call stack and callback queue
+    - If the call stack is empty, it pushes the next callback from the queue into the stack
+
+// basic call stack example 
+function first() {
+    console.log('first');
+}
+
+function second() {
+    first();
+    console.log('second');
+}
+
+second(); // Output: first, second
+
+//Example with Web APIs and Event Loop
+console.log("one");
+
+window.setTimeout(() => console.log("TWo"), 0);
+
+console.log("three"); // Output: one three TWo
+
+// Example: let and Hoisting
+// console.log(myVar); ❌ ReferenceError
+// let myVar = 100;
+
+window.setTimeout(() => console.log(myVar), 0);
+
+let myVar = 100;
+myVar += 200;
+
+

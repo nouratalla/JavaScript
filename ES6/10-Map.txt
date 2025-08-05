@@ -1,0 +1,35 @@
+- Map allow you to put any data type in key
+    - object 
+    - let user = {
+        name:"nour",
+        age:10,
+    };
+    - convert key to string
+
+    - map
+    - let myMap = new Map();
+    myMap.set("10","string")
+         .set(false,"boolean")
+         .set(10,"Number");
+    - dont convert key to string
+
+- Map methods:
+    - myMap.size 
+    - myMap.get(key)
+    - myMap.has(key)
+    - myMap.delete(key)
+    - myMap.clear()
+
+- Map Vs weakMap:
+    - Map:
+        - contain any types of values
+        - get elements size on it
+        - forEach available
+        - you can get its key
+        - if you set an object in it to null it still exist (garbage collection does not remove it )
+    - WeakMap:
+        - contain object only    ( return invalid value if you try to add string or int)
+        - you cannot use size    (return undefined)
+        - forEach not available  (return forEach is not a function)
+        - you cant get its keys
+        - if you set an object in it to null it is deleted (garbage collection remove it )

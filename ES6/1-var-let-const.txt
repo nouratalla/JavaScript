@@ -1,0 +1,18 @@
+1 - var :
+	- function scope
+	- can be redeclared
+	- show undefined when accessing a variable before it's declared
+	- create a property in the window object
+
+2 - let :
+	- Block scope
+	- cannot be redeclared
+	- show ReferenceError when accessing a variable before it's declared
+	- Does not create a property in the window object
+
+3 - const : 
+	- Block scope
+	- cannot be redeclared
+	- show ReferenceError when accessing a variable before it's declared
+	- Does not create a property in the window object
+	- cannot be reassigned

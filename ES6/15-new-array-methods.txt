@@ -1,0 +1,32 @@
+//Array .of (elements to create the array)
+let arr = Array.of(100, 200);
+console.log(arr.length);
+
+//Array .from (iterable, map, this)
+let myName = "nour";
+let arr2 = Array.from(myName);
+console.log(myName);
+console.log(arr2);
+
+let myNumbers = [10,20,30,40,50];
+let arr3 = Array.from(myNumbers, number => number - 10);
+console.log(arr3);
+
+//Array .fill(value to fill, start default 0, end default array.length)
+let numbers = [1,2,3,4,5,6];
+numbers.fill(100);
+console.log(numbers);
+
+//Array.find()
+let found = myNumbers.find(el => el > 30); // first value found
+console.log(found);
+
+//Array.findIndex()
+let found2 = myNumbers.findIndex(el => el > 30); // first value found
+console.log(found2);
+
+//Array.copyWithin(Target, start, end)
+let myLetters = ['a','b','c','d','e','f'];
+myLetters.copyWithin(0, 3, 6);
+console.log(myLetters);
+

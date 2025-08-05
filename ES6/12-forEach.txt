@@ -1,0 +1,30 @@
+- forEach (current value, index, array)
+
+    - const arr = ["A","b","c","d",,"E"];
+
+    for (let i = 0 ; i < arr.length ; i ++){
+        console.log(arr[i]);
+    };
+
+
+    arr.forEach( (element, index) => {
+        console.log(`${index} - ${element}`);
+    });
+
+- with set:
+    here set dont have key so current key and current value are the same
+    const mySet = new Set([1,1,1,2,2,3,4,5,6]);
+
+    mySet.forEach( (item,item1) => {
+        console.log(`${item} - ${item1}`);
+    })
+
+- with map:
+    forEach (value, key, map)
+    const myMap = new Map([ ["A",1],["B",2],["c",3],["d",{}] ]);
+
+    myMap.forEach( (value,key) => {
+        console.log(`${value} - ${key}`);
+    });
+
+

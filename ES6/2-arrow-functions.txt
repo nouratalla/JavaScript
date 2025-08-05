@@ -1,0 +1,38 @@
+1 - regular function:
+	- Syntax: 
+		hello = function() {
+  				return "Hello World!";
+			}
+	- this:
+		this keyword represented the object that called the function, which could be the window, the document, a button or whatever.
+		// Regular Function:
+		hello = function() {
+		document.getElementById("demo").innerHTML += this;
+		}
+
+		// The window object calls the function:
+		window.addEventListener("load", hello); // show object Window
+
+		// A button object calls the function:
+		document.getElementById("btn").addEventListener("click", hello); // show object HTMLButtonElement
+
+
+
+
+2 - arrow function:
+	- Syntax: 
+		hello = () => {
+  				return "Hello World!";
+			}
+	- this:
+		represents the object that defined the arrow function
+		// Arrow Function:
+		hello = () => {
+		document.getElementById("demo").innerHTML += this;
+		}
+
+		// The window object calls the function:
+		window.addEventListener("load", hello); // show object Window
+
+		// A button object calls the function:
+		document.getElementById("btn").addEventListener("click", hello); // show object Window

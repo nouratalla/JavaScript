@@ -1,0 +1,17 @@
+- Template literals (Template Strings) use back-ticks (``) 
+
+
+let myName = "nour";
+
+
+let OldWay = "hello My name is " + myName + "\n Iam from egypt";
+console.log(OldWay);
+
+//${} called placeholder
+
+let newWay = `
+my name is ${myName}
+Iam from Egypt
+`;
+
+console.log(newWay);
