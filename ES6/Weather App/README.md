@@ -27,7 +27,7 @@ It allows users to search for any city and view the current temperature, humidit
 
 ---
 
-## ES6 Features Used
+##⭐ ES6 Features Used
 - const and let
 - Arrow Functions
 - Template Literals
