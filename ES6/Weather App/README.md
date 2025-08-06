@@ -27,6 +27,14 @@ It allows users to search for any city and view the current temperature, humidit
 
 ---
 
+## ES6 Features Used
+- const and let
+- Arrow Functions
+- Template Literals
+- Destructuring Assignment
+- Promises with .then() and .catch()
+
+
 ## 📦 How to Use
 
 1. Clone the repository
