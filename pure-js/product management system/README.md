@@ -26,9 +26,7 @@ A simple CRUD (Create, Read, Update, Delete) application built with vanilla Java
 - CSS
 - Vanilla JavaScript
 
-## What I Learned
-
-This project helped me understand:
+## What I Applied From JS
 
 - DOM manipulation without libraries
 - localStorage API for data persistence
