@@ -38,6 +38,6 @@ It allows users to search for any city and view the current temperature, humidit
 ## 📦 How to Use
 
 1. Clone the repository
-2. add your aoi key int the `main.js`
+2. add your api key in the `main.js`
 3. Open `index.html` in any modern web browser
 5. No server required - works directly from file system
