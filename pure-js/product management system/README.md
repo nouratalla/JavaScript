@@ -1,10 +1,10 @@
-# Product Management System
+# 👁 Product Management System
 
 A simple CRUD (Create, Read, Update, Delete) application built with vanilla JavaScript that manages products with local storage persistence.
 
 ![Product Management System Screenshot](screenshot.png)
 
-## Features
+## 🚀 Features
 
 - **Create products** with:
   - Title
@@ -20,13 +20,13 @@ A simple CRUD (Create, Read, Update, Delete) application built with vanilla Java
   - Product category
 - **Data persistence** using browser's localStorage
 
-## Technologies Used
+## 🛠️ Technologies Used
 
 - HTML5
 - CSS
 - Vanilla JavaScript
 
-## JS Features Used
+## ⭐ JS Features Used
 
 - DOM manipulation without libraries
 - localStorage API for data persistence
@@ -36,7 +36,7 @@ A simple CRUD (Create, Read, Update, Delete) application built with vanilla Java
 - Dynamic HTML generation
 - Search/filter functionality
 
-## How to Run
+## 📦 How to Run
 
 1. Clone the repository
 2. Open `crud.html` in any modern web browser
