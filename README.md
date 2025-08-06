@@ -4,13 +4,13 @@ This repository documents my progressive learning of JavaScript technologies, st
 
 ## 🛤️ Learning Path
 
-1. ** 🔰 Pure JavaScript Fundamentals**
+1. ## 🔰 Pure JavaScript Fundamentals
    - DOM manipulation
    - Event handling
    - LocalStorage API
    - CRUD operations
 
-2. ** 🆕 ECMAScript 6 (ES6)**
+2. ## 🆕 ECMAScript 6 (ES6)
    - Classes
    - Modules
    - Template literals
@@ -19,13 +19,13 @@ This repository documents my progressive learning of JavaScript technologies, st
    - Promises
    - Generators
 
-3. ** 🌐 AJAX & JSON**
+3. ## 🌐 AJAX & JSON
    - Fetch API
    - Async/Await
    - JSON manipulation
    - Working with REST APIs
 
-4. ** 🦉 OWL**
+4. ## 🦉 OWL
  
 
 ## 🔄 Current Progress
@@ -33,7 +33,7 @@ This repository documents my progressive learning of JavaScript technologies, st
 ### ✔️ Completed: Pure JavaScript
 - [Product Management System](pure-js/product%20management%20system) - CRUD application with localStorage persistence
 ### ✔️ Completed: JavaScript ES6
-- [Weather App](ES6/Weather%App) - simple and modern Weather Application
+- [Weather App](ES6/Weather%20App) - simple and modern Weather Application
 
 
 ## How to Use This Repository
