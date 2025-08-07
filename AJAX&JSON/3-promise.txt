@@ -1,0 +1,64 @@
+- Promise:
+    - A JavaScript object that represents the eventual completion (or failure) of an asynchronous operation and its result
+    - Used to handle asynchronous operations like AJAX, setTimeout, file reads, etc
+    - Has three status:
+        - pending (Initial state)
+        - fulfilled (completed)
+        - rejected (fail)
+    - Modern AJAX (using fetch()) returns a Promise
+    - So you often use Promises to handle the result of an AJAX call.
+
+- example use promise with XHR:
+    const getData = (apiLink) => {
+    return new Promise((resolve, reject) => {
+    let myReq = new XMLHttpRequest();
+    myReq.onload = function () {
+        if (this.readyState === 4 && this.status === 200){
+            resolve(JSON.parse(this.responseText));
+        }else {
+            reject(Error("No Data Found"));
+            }
+        };
+    myReq.open("GET", apiLink);
+    myReq.send();
+    });
+};
+
+getData("https://api.github.com/users/nouratalla/repos").then((result)=> {
+    result.length = 3;
+    return result;
+})
+.then((result)=>{
+    console.log(result[0].name);
+})
+.catch((reject)=> console.log(reject));
+
+- fetch() :
+    - is a built-in JavaScript function that performs HTTP requests (GET, POST, etc.) and returns a Promise.
+
+- Async:
+    -  keyword is used to define a function that returns a Promise
+    - async function sayHello() {
+        return "Hello!";
+        }
+
+    sayHello().then(msg => console.log(msg)); // Output: Hello!
+
+- Await
+    - works only inside async function 
+    - wait for the promise result then complete the code
+
+const myPromise = new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+                resolve("Iam a promise");
+        }, 3000);
+});
+
+
+async function test() {
+        console.log("Before rpomise");
+        console.log(await myPromise);
+        console.log("after the promise");
+}
+
+test();

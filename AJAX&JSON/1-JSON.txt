@@ -1,0 +1,68 @@
+- JSON:
+    - stands for Java Script Object Notation
+    - Format for sharing data between server and client
+    - alternative to xml
+
+- Why using it:
+    - easy to use
+    - used by most programming languages
+    - can convert json to js object and vice versa
+
+-   JSON                VS              XML:
+    Text based Format           - Markup language
+    lightweight                 - heavy
+    dont use tags               - use tags
+    shorter                     - longer                (in code)
+    can use array               - cannot use arrays
+    does not support comments   - support comments
+
+- Json data example:
+    {
+  "book": {
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "year": 1925,
+    "genres": ["Fiction", "Classic"]
+  }
+}
+
+- XML data example:
+<book>
+  <title>The Great Gatsby</title>
+  <author>F. Scott Fitzgerald</author>
+  <year>1925</year>
+  <genres>
+    <genre>Fiction</genre>
+    <genre>Classic</genre>
+  </genres>
+</book>
+ 
+
+- Json syntax:
+    - Data added inside curly braces {} wit key : value
+    - key should be string in ""
+    - data separated by comma
+    - [] used for arrays
+    - {} used for objects
+
+- JSON.parse:
+    - convert Text Data to JS object ( Data comes from the server as string we need to convert it to JS object)
+    - example:
+        const jsonData = '{"name":"Alice","age":30,"city":"New York"}'; // data that comes from server
+        const personObj = JSON.parse(jsonData);
+        console.log(personObj.name); // Alice
+        console.log(personObj.age);  // 30
+
+
+- JSON.stringify:
+    - convert JS object to JSON
+    - example:
+        const person = {
+            name: "Alice",
+            age: 30,
+            city: "New York"
+        };
+        const jsonString = JSON.stringify(person);
+        console.log(jsonString); //{"name":"Alice","age":30,"city":"New York"}
+
+

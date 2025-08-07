@@ -1,0 +1,33 @@
+- AJAX:
+    - stands for Asynchronous JavaScript And xml
+    - Approach to use many techs together [HTML, CSS, JS, DOM]
+    - It use XMLHttpRequest object to interact with the server 
+    - help you to fetch and send data without page refresh
+    - example:
+        - you fill a form and the user name is already exist in the db ajax without need to 
+          press submit button make a call to the db and check if the user name is exist
+    
+    - Properties of XMLHttpRequest object:
+        - readystate (status of XMLHttpRequest):
+            - 0: request not initialized
+            - 1: server connection established
+            - 2: request received
+            - 3: processing request
+            - 4: request finished and response is ready
+        - status ( returns the status-number of a request)
+            - 200: "OK"
+            - 404: "Not Found"
+    
+
+code Example:
+// Create  XMLHttpRequest
+const myReq = new XMLHttpRequest();
+// open take Method, Url, async bool, user name and password
+myReq.open("GET", "https://api.github.com/users/nouratalla");
+myReq.send();
+console.log(myReq);   
+//is a property of the XMLHttpRequest Object which defines a function to be called when the readyState property changes
+myReq.onreadystatechange = function () {
+    if (this.readyState === 4 && this.status === 200)
+        console.log(this.responseText);
+} 
