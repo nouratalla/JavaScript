@@ -34,6 +34,8 @@ This repository documents my progressive learning of JavaScript technologies, st
 - [Product Management System](pure-js/product%20management%20system) - CRUD application with localStorage persistence
 ### ✔️ Completed: JavaScript ES6
 - [Weather App](ES6/Weather%20App) - simple and modern Weather Application
+### ✔️ Completed: AJAX & JSON
+- [Movie Search App](AJAX%26JSON/movie-search-app) - simple and Movie Search App
 
 
 ## How to Use This Repository
